@@ -2,29 +2,47 @@ import requests as rq
 import json
 from datetime import datetime
 
-type1 = "wave"
-params = "spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=12"
-url = f"https://services.surfline.com/kbyg/spots/forecasts/{type1}?{params}"
+def main():
 
-response = rq.get(url)
-surfline_data = response.content
-surfline_data = json.loads(surfline_data.decode())
+    type1 = "wave"
+    cupsogue_params = "spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=12"
+    base_url = f"https://services.surfline.com/kbyg/spots/forecasts/{type1}?{cupsogue_params}"
 
-wave_dict = surfline_data.get("data")
-swell_data = wave_dict.get("wave")
-#swell_data_print = json.dumps(wave_dict.get("wave"),indent=2)
+    cupsogue_data_dict = request(base_url, type1, cupsogue_params)
+    display(cupsogue_data_dict)
 
-#print(swell_data[0])
+def request(url,type,params):
 
+    response = rq.get(url)
+    surfline_data = response.content
+    surfline_data = json.loads(surfline_data.decode())
 
-#looks for timestamps and updates to datetime (string format)
-#there may be multiple occurences of the key 'timestamp' in a dict, and the loop may be overwriting them?
+    wave_dict = surfline_data.get("data")
+    swell_data = wave_dict.get("wave")
 
-for dicts in swell_data:
-    for key,items in dicts.items():
-        if key == "timestamp":
-            dt = datetime.fromtimestamp(items)
-            formatted_time = dt.strftime('%m/%d/%Y:%I:%M:%s')
-            dicts[key] = formatted_time
-            
-print(json.dumps(swell_data,indent=2))
+    #looks for timestamps and updates to datetime (string format)
+    #there may be multiple occurences of the key 'timestamp' in a dict, and the loop may be overwriting them?
+
+    for dicts in swell_data:
+        for key,items in dicts.items():
+            if key == "timestamp":
+                dt = datetime.fromtimestamp(items)
+                formatted_time = dt.strftime('%m/%d/%Y:%I:%M:%s')
+                dicts[key] = formatted_time
+    
+    return swell_data
+    
+def display(info_to_display):
+
+    dataType = type(info_to_display)
+    print(str(dataType))
+    
+    if str(dataType) == "<class 'list'>":
+        print(json.dumps(info_to_display,indent=2))
+        #print(swell_data[0])
+    else:
+        print("the requested data was not a list, and"
+               "could not be displayed with this function.")
+        
+if __name__ == "__main__":
+    main()
