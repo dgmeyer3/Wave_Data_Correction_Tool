@@ -6,14 +6,18 @@ def main():
 
     type1 = "wave"
     cupsogue_params = "spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=12"
-    base_url = f"https://services.surfline.com/kbyg/spots/forecasts/{type1}?{cupsogue_params}"
+    base_url = f"https://services.surfline.com/kbyg/spots/forecasts/"
+    
+    #{type1}?{cupsogue_params}
 
     cupsogue_data_dict = request(base_url, type1, cupsogue_params)
     display(cupsogue_data_dict)
 
-def request(url,type,params):
+def request(url,type_data,params):
 
-    response = rq.get(url)
+    updated_url = f"{url}{type_data}?{params}"
+
+    response = rq.get(updated_url)
     surfline_data = response.content
     surfline_data = json.loads(surfline_data.decode())
 
