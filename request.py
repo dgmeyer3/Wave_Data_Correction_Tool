@@ -1,20 +1,25 @@
 import requests as rq 
 import json
+import psycopg2
 from sqlalchemy import create_engine
 from sqlalchemy import text
 from datetime import datetime
+
+#db: testdatabase
 
 def main():
 
     type1 = "wave"
     cupsogue_params = "spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=12"
     base_url = f"https://services.surfline.com/kbyg/spots/forecasts/"
+    pg_username = "tester"
+    pg_password = "not real password"
     
     #{type1}?{cupsogue_params}
 
     #cupsogue_data_dict = request(base_url, type1, cupsogue_params)
     #display(cupsogue_data_dict)
-    connect_to_db()
+    connect_to_db(pg_username,pg_password)
 
 def request(url,type_data,params):
 
@@ -34,7 +39,7 @@ def request(url,type_data,params):
         for key,items in dicts.items():
             if key == "timestamp":
                 dt = datetime.fromtimestamp(items)
-                formatted_time = dt.strftime('%m/%d/%Y:%I:%M:%s')
+                formatted_time = dt.strftime('%m/%d/%Y:%I:%M')
                 dicts[key] = formatted_time
     
     return swell_data
@@ -51,8 +56,8 @@ def display(info_to_display):
         print("the requested data was not a list, and"
                "could not be displayed with this function.")
         
-def connect_to_db():
-    db = create_engine("sqlite+pysqlite:///:memory:", echo = True)
+def connect_to_db(user, password):
+    db = create_engine(f"postgresql+psycopg2://{user}:{password}@localhost:5432/testdatabase", echo = True)
     with db.connect() as conn:
         result = conn.execute(text("select 'test'"))
         
