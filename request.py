@@ -1,5 +1,7 @@
 import requests as rq 
 import json
+from sqlalchemy import create_engine
+from sqlalchemy import text
 from datetime import datetime
 
 def main():
@@ -10,8 +12,9 @@ def main():
     
     #{type1}?{cupsogue_params}
 
-    cupsogue_data_dict = request(base_url, type1, cupsogue_params)
-    display(cupsogue_data_dict)
+    #cupsogue_data_dict = request(base_url, type1, cupsogue_params)
+    #display(cupsogue_data_dict)
+    connect_to_db()
 
 def request(url,type_data,params):
 
@@ -47,6 +50,11 @@ def display(info_to_display):
     else:
         print("the requested data was not a list, and"
                "could not be displayed with this function.")
+        
+def connect_to_db():
+    db = create_engine("sqlite+pysqlite:///:memory:", echo = True)
+    with db.connect() as conn:
+        result = conn.execute(text("select 'test'"))
         
 if __name__ == "__main__":
     main()
