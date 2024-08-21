@@ -20,13 +20,14 @@ def main():
     #{type1}?{cupsogue_params}
 
     cupsogue_data_dict = request(base_url, type1, cupsogue_params)
+    
 
     #display(cupsogue_data_dict)
 
-    #print(cupsogue_data_dict[0]["timestamp"])
+    #print(type(cupsogue_data_dict[0]["timestamp"]))
     #print(cupsogue_data_dict[0]["surf"])
     #for key, value in cupsogue_data_dict[0]['surf'].items():
-    #    print(f"{key}:{type(value)}")   
+    #    print(f"{key}:{type(value)}")
    
     db_actions.connect_to_db(pg_username,pg_password,cupsogue_data_dict) 
 
