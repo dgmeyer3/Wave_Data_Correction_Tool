@@ -1,9 +1,7 @@
 import requests as rq 
 import json
-import psycopg2
-from sqlalchemy import create_engine
-from sqlalchemy import text
 from datetime import datetime
+import db_actions
 
 #db: testdatabase
 #change intervalhours to an appropriate number of my choosing
@@ -16,15 +14,21 @@ def main():
     type1 = "wave"
     cupsogue_params = "spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=6"
     base_url = f"https://services.surfline.com/kbyg/spots/forecasts/"
-    pg_username = "tester"
-    pg_password = " "
+    pg_username = "surf_admin"
+    pg_password = "PondPoint99"
     
     #{type1}?{cupsogue_params}
 
     cupsogue_data_dict = request(base_url, type1, cupsogue_params)
 
     #display(cupsogue_data_dict)
-    connect_to_db(pg_username,pg_password,cupsogue_data_dict)
+
+    #print(cupsogue_data_dict[0]["timestamp"])
+    #print(cupsogue_data_dict[0]["surf"])
+    #for key, value in cupsogue_data_dict[0]['surf'].items():
+    #    print(f"{key}:{type(value)}")   
+   
+    db_actions.connect_to_db(pg_username,pg_password,cupsogue_data_dict) 
 
 def request(url,type_data,params):
 
@@ -37,18 +41,19 @@ def request(url,type_data,params):
     wave_dict = surfline_data.get("data")
     swell_data = wave_dict.get("wave")
 
+    return swell_data
+
     #looks for timestamps and updates to datetime (string format)
     #there may be multiple occurences of the key 'timestamp' in a dict, and the loop may be overwriting them?
-
+'''
     for dicts in swell_data:
         for key,items in dicts.items():
             if key == "timestamp":
                 dt = datetime.fromtimestamp(items)
                 formatted_time = dt.strftime('%m/%d/%Y:%I:%M')
                 dicts[key] = formatted_time
-    
-    return swell_data
-    
+'''
+     
 def display(info_to_display):
 
     dataType = type(info_to_display)
@@ -62,15 +67,6 @@ def display(info_to_display):
     else:
         print("the requested data was not a list, and"
                "could not be displayed with this function.")
-        
-def connect_to_db(user,password,data_for_db):
-    db = create_engine(f"postgresql+psycopg2://{user}:{password}@localhost:5432/testdatabase", echo = True)
-    with db.connect() as conn:
-        for item in data_for_db:
-            conn.execute("INSERT into testdatabase(12AM,6AM,12PM,6PM) VALUES (%s, %s, %s, %s)", item)
-
-        conn.commit()
-        conn.close()
         
 if __name__ == "__main__":
     main()
