@@ -21,7 +21,6 @@ def main():
 
     cupsogue_data_dict = request(base_url, type1, cupsogue_params)
     
-
     #display(cupsogue_data_dict)
 
     #print(type(cupsogue_data_dict[0]["timestamp"]))
@@ -46,12 +45,7 @@ def request(url,type_data,params):
 
     #there may be multiple occurences of the key 'timestamp' in a dict, and the loop may be overwriting them?
 '''
-    for dicts in swell_data:
-        for key,items in dicts.items():
-            if key == "timestamp":
-                dt = datetime.fromtimestamp(items)
-                formatted_time = dt.strftime('%m/%d/%Y:%I:%M')
-                dicts[key] = formatted_time
+
 '''
      
 def display(info_to_display):
@@ -67,6 +61,16 @@ def display(info_to_display):
     else:
         print("the requested data was not a list, and"
                "could not be displayed with this function.")
+        
+def convertTimestamp(swell_data):
+    for dicts in swell_data:
+        for key,items in dicts.items():
+            if key == "timestamp":
+                dt = datetime.fromtimestamp(items)
+                formatted_time = dt.strftime('%m/%d/%Y:%I:%M')
+                dicts[key] = formatted_time
+    
+    return swell_data
         
 if __name__ == "__main__":
     main()
