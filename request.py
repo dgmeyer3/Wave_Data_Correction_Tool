@@ -15,7 +15,7 @@ def main():
     cupsogue_params = "spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=6"
     base_url = f"https://services.surfline.com/kbyg/spots/forecasts/"
     pg_username = "surf_admin"
-    pg_password = "PondPoint99"
+    pg_password = ""
     
     #{type1}?{cupsogue_params}
 
@@ -43,7 +43,6 @@ def request(url,type_data,params):
 
     return swell_data
 
-    #looks for timestamps and updates to datetime (string format)
     #there may be multiple occurences of the key 'timestamp' in a dict, and the loop may be overwriting them?
 '''
     for dicts in swell_data:
