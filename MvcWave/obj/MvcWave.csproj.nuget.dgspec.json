@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj": {}
+    "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj": {}
   },
   "projects": {
-    "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj": {
+    "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj",
+        "projectUniqueName": "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj",
         "projectName": "MvcWave",
-        "projectPath": "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj",
+        "projectPath": "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj",
         "packagesPath": "C:\\Users\\2donm\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\obj\\",
+        "outputPath": "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\2donm\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -67,6 +67,10 @@
               "version": "[8.0.8, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.4, )"
             }
