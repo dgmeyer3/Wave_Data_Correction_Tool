@@ -9,7 +9,7 @@ def connect_to_db(user,password,data_for_db):
     
     conn = db.connect()
     metadata = sa.MetaData()
-    table=sa.Table('example_table', metadata, autoload_with = db)
+    table=sa.Table('surf_data', metadata, autoload_with = db)
 
     for item in data_for_db:
         timestamp = item["timestamp"]

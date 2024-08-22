@@ -44,9 +44,6 @@ def request(url,type_data,params):
     return swell_data
 
     #there may be multiple occurences of the key 'timestamp' in a dict, and the loop may be overwriting them?
-'''
-
-'''
      
 def display(info_to_display):
 
