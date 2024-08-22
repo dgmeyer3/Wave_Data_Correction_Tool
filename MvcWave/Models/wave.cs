@@ -1,8 +1,8 @@
 using System.ComponentModel.DataAnnotations;
+ 
+namespace MvcWave.Models;
 
-namespace MvcMovie.Models;
-
-public class Movie
+public class Wave
 {
     public int timestamp { get; set; }
     public int min { get; set; }

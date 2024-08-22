@@ -1,0 +1,78 @@
+@model MvcWave.Models.Wave
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Wave</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.timestamp)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.timestamp)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.min)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.min)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.max)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.max)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.humanRelation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.humanRelation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.raw)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.raw)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.optimalScore)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.optimalScore)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.accurateRating)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.accurateRating)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.realMin)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.realMin)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.realMax)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.realMax)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.comments)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.comments)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

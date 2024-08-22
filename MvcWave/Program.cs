@@ -1,4 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using MvcWave.Data;
 var builder = WebApplication.CreateBuilder(args);
+
+if (builder.Environment.IsDevelopment())
+{
+    builder.Services.AddDbContext<MvcWaveContext>(options =>
+        options.UseSqlite(builder.Configuration.GetConnectionString("MvcWaveContext")));
+}
+else
+{
+    builder.Services.AddDbContext<MvcWaveContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("ProductionMvcWaveContext")));
+
+        // REPLACE .UseSqlServer with postgres, somehow
+}
+
+//builder.Services.AddDbContext<MvcWaveContext>(options =>
+//    options.UseSqlite(builder.Configuration.GetConnectionString("MvcWaveContext") ?? throw new InvalidOperationException("Connection string 'MvcWaveContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

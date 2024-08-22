@@ -1,0 +1,78 @@
+@model MvcWave.Models.Wave
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Wave</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="timestamp" class="control-label"></label>
+                <input asp-for="timestamp" class="form-control" />
+                <span asp-validation-for="timestamp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="min" class="control-label"></label>
+                <input asp-for="min" class="form-control" />
+                <span asp-validation-for="min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="max" class="control-label"></label>
+                <input asp-for="max" class="form-control" />
+                <span asp-validation-for="max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="humanRelation" class="control-label"></label>
+                <input asp-for="humanRelation" class="form-control" />
+                <span asp-validation-for="humanRelation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="raw" class="control-label"></label>
+                <input asp-for="raw" class="form-control" />
+                <span asp-validation-for="raw" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="optimalScore" class="control-label"></label>
+                <input asp-for="optimalScore" class="form-control" />
+                <span asp-validation-for="optimalScore" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="accurateRating" /> @Html.DisplayNameFor(model => model.accurateRating)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="realMin" class="control-label"></label>
+                <input asp-for="realMin" class="form-control" />
+                <span asp-validation-for="realMin" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="realMax" class="control-label"></label>
+                <input asp-for="realMax" class="form-control" />
+                <span asp-validation-for="realMax" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="comments" class="control-label"></label>
+                <input asp-for="comments" class="form-control" />
+                <span asp-validation-for="comments" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
