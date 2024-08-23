@@ -7,8 +7,10 @@ var builder = WebApplication.CreateBuilder(args);
 
 if (builder.Environment.IsDevelopment()){
     builder.Services.AddDbContext<MvcWaveContext>(options =>
-        options.UseSqlite(builder.Configuration.GetConnectionString("MvcWaveContext")));
+        options.UseNpgsql(builder.Configuration.GetConnectionString("ProductionMvcWaveContext")));
+        //options.UseSqlite(builder.Configuration.GetConnectionString("MvcWaveContext")));
 }
+
 else{    
     builder.Services.AddDbContext<MvcWaveContext>(options =>
         options.UseNpgsql(builder.Configuration.GetConnectionString("ProductionMvcWaveContext")));

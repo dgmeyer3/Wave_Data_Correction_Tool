@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj": {}
+    "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj": {}
   },
   "projects": {
-    "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj": {
+    "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj",
+        "projectUniqueName": "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj",
         "projectName": "MvcWave",
-        "projectPath": "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj",
+        "projectPath": "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\MvcWave.csproj",
         "packagesPath": "C:\\Users\\2donm\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\obj\\",
+        "outputPath": "c:\\Users\\2donm\\Desktop\\project_directory\\Wave_Corrector\\MvcWave\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\2donm\\AppData\\Roaming\\NuGet\\NuGet.Config",
