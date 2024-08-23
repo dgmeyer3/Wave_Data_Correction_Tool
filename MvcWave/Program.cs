@@ -1,12 +1,14 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
+using Npgsql;
 using MvcWave.Data;
 var builder = WebApplication.CreateBuilder(args);
 
 
 if (builder.Environment.IsDevelopment()){
     builder.Services.AddDbContext<MvcWaveContext>(options =>
+
         options.UseNpgsql(builder.Configuration.GetConnectionString("ProductionMvcWaveContext")));
         //options.UseSqlite(builder.Configuration.GetConnectionString("MvcWaveContext")));
 }

@@ -9,16 +9,16 @@ def connect_to_db(user,password,data_for_db):
     
     conn = db.connect()
     metadata = sa.MetaData()
-    table=sa.Table('surf_data', metadata, autoload_with = db)
+    table=sa.Table('wave', metadata, autoload_with = db)
 
     for item in data_for_db:
         timestamp = item["timestamp"]
 
-        data_list = {"timestamp": timestamp,"Min": item["surf"]["min"],
-                                        "Max": item["surf"]["max"],"Plus": item["surf"]["plus"],
-                                        "HumanRelation": item["surf"]["humanRelation"],
-                                        "Raw": item["surf"]["raw"],
-                                        "OptimalScore": item["surf"]["optimalScore"]}
+        data_list = {"timestamp": timestamp,"min": item["surf"]["min"],
+                                        "max": item["surf"]["max"],"plus": item["surf"]["plus"],
+                                        "humanRelation": item["surf"]["humanRelation"],
+                                        "raw": str(item["surf"]["raw"]),
+                                        "optimalScore": item["surf"]["optimalScore"]}
         
         stmt = insert(table).values(data_list)
         conn.execute(stmt)

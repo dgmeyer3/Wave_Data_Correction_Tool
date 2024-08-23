@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MvcWave")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6eaea9ea8b9eb027e8f54a309df4835385d6bf10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a74bb21ae6a9e593c30b27e71c216663d6ec8f5")]
 [assembly: System.Reflection.AssemblyProductAttribute("MvcWave")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MvcWave")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
