@@ -279,3 +279,4 @@ c:\Users\2donm\Desktop\project_directory\Wave_Corrector\MvcWave\obj\Debug\net8.0
 c:\Users\2donm\Desktop\project_directory\Wave_Corrector\MvcWave\obj\Debug\net8.0\MvcWave.csproj.Up2Date
 C:\Users\2donm\Desktop\project_directory\Wave_Corrector\MvcWave\bin\Debug\net8.0\Npgsql.dll
 C:\Users\2donm\Desktop\project_directory\Wave_Corrector\MvcWave\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+c:\Users\2donm\Desktop\project_directory\Wave_Corrector\MvcWave\bin\Debug\net8.0\NetTopologySuite.dll

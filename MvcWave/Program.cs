@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Npgsql;
+using NpgsqlTypes;
 using MvcWave.Data;
 var builder = WebApplication.CreateBuilder(args);
 

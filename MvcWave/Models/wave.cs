@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
- 
+using NetTopologySuite;
+using NetTopologySuite.Geometries;
+
 namespace MvcWave.Models;
 
 public class Wave

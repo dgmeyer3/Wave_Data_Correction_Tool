@@ -20,9 +20,19 @@ namespace MvcWave.Controllers
         }
 
         // GET: Wave
-        public async Task<IActionResult> Index()
-        {
-            return View(await _context.Wave.ToListAsync());
+        public async Task<IActionResult> Index(string searchString){
+            if(_context.Wave == null){
+                return Problem("Entity set 'MvcWaveContext.Wave is null.");
+            }
+
+            var waves = from w in _context.Wave
+                select w;
+
+            if(!string.IsNullOrEmpty(searchString)){
+               waves = waves.Where(q => q.timestamp.ToString()!.ToUpper().Contains(searchString.ToUpper()));
+            }
+
+            return View(await waves.ToListAsync());
         }
 
         // GET: Wave/Details/5
