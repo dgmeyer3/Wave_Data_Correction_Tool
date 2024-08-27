@@ -1,6 +1,7 @@
-import requests as rq 
-import json
 from datetime import datetime
+import json
+import requests as rq 
+import sys
 import db_actions
 import config_read
 
@@ -9,12 +10,24 @@ import config_read
 #create column in db for each list item
 #load list to db 
 
-
-
 def main():
 
+    """
+    ARGS
+    ----
+    argv[0] : filename
+    argv[1] : spot_id_params
+    argv[2] : db_table_name
+
+    """
+
     type1 = "wave"
-    cupsogue_params = "spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=6"
+
+    # params: [spotID, db_table_name]
+    cupsogue_params = ["spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=6", "Wave"]
+    dune_rd_west_params = ["spotId=584204214e65fad6a7709d07&days=1&intervalHours=6","Westhampton_Dunes"]
+    road_k_params = ["spotId=5842041f4e65fad6a77089f7&days=1&intervalHours=6","Road_K"]
+
     base_url = f"https://services.surfline.com/kbyg/spots/forecasts/"
     
     config_data = config_read.read_config()
@@ -26,9 +39,9 @@ def main():
     pg_port = config_data['db_port']
 
     #print(pg_db + ' ' +pg_username + ' ' + pg_password + ' ' + pg_host + ' ' + pg_db + ' ' + pg_port)
-    
-    cupsogue_data_dict = request(base_url, type1, cupsogue_params)
-    db_actions.connect_to_db(pg_username,pg_password,pg_db,pg_host,pg_port,cupsogue_data_dict,"Wave") 
+    print(sys.argv[1])
+    cupsogue_data_dict = request(base_url, type1, sys.argv[1])
+    db_actions.connect_to_db(pg_username,pg_password,pg_db,pg_host,pg_port,cupsogue_data_dict,sys.argv[2]) 
 
 def request(url,type_data,params):
 
