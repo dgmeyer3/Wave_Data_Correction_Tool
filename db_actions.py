@@ -4,9 +4,27 @@ from sqlalchemy import insert
 from sqlalchemy import Table, Column, Integer, String, Boolean, MetaData
 import sqlalchemy as sa
 
-def connect_to_db(user,password,data_for_db,table_name):
+def connect_to_db(user,password,db_name,db_host,db_port,data_for_db,table_name):
+    """
+    connects to a db with the username, password, db name, table name, port and host.
 
-    db = create_engine(f"postgresql+psycopg2://{user}:{password}@localhost:5432/surf_db", echo = True)
+    Parameters
+    ----------
+    user : string
+    password : string
+    db_name : string
+    db_host : string
+    db_port : string
+    data_for_db: list[string]
+    table_name: string
+
+    Returns
+    -------
+    void 
+    
+    """
+
+    db = create_engine(f"postgresql+psycopg2://{user}:{password}@{db_host}:{db_port}/{db_name}", echo = True)
     conn = db.connect()
 
     if not sa.inspect(db).has_table(table_name):

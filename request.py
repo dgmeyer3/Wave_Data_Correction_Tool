@@ -2,32 +2,33 @@ import requests as rq
 import json
 from datetime import datetime
 import db_actions
+import config_read
 
-#db: testdatabase
 #change intervalhours to an appropriate number of my choosing
 #count number of items in list
 #create column in db for each list item
 #load list to db 
+
+
 
 def main():
 
     type1 = "wave"
     cupsogue_params = "spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=6"
     base_url = f"https://services.surfline.com/kbyg/spots/forecasts/"
-    pg_username = "surf_admin"
-    pg_password = ""
     
-    #{type1}?{cupsogue_params}
+    config_data = config_read.read_config()
 
+    pg_username = config_data['db_username']
+    pg_password = config_data['db_password']
+    pg_db = config_data['db_name']
+    pg_host = config_data['db_host']
+    pg_port = config_data['db_port']
+
+    #print(pg_db + ' ' +pg_username + ' ' + pg_password + ' ' + pg_host + ' ' + pg_db + ' ' + pg_port)
+    
     cupsogue_data_dict = request(base_url, type1, cupsogue_params)
-    
-    
-    #display(cupsogue_data_dict)
-
-    #for key, value in cupsogue_data_dict[0]['surf'].items():
-    #    print(f"{key}:{type(value)}")
-   
-    db_actions.connect_to_db(pg_username,pg_password,cupsogue_data_dict,"Wave") 
+    db_actions.connect_to_db(pg_username,pg_password,pg_db,pg_host,pg_port,cupsogue_data_dict,"Wave") 
 
 def request(url,type_data,params):
 
