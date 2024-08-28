@@ -6,3 +6,19 @@
 function routeToSpot(){
     document.getElementById("spot-dropdown").classList.toggle("show");
 }
+
+window.onclick = function(event) {
+    
+    if (!event.target.matches('.btn')) {
+      var unhiddenElements = document.getElementsByClassName("dropdown-content");
+      var i;
+      
+      for (i = 0; i < unhiddenElements.length; i++) {
+       
+        var openDiv = unhiddenElements[i];
+        if (openDiv.classList.contains('show')) {
+          openDiv.classList.remove('show');
+        }
+      }
+    }
+  } 
