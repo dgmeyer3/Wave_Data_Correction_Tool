@@ -4,7 +4,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Npgsql;
 using NpgsqlTypes;
 using MvcWave.Data;
+using MvcMovie.Data;
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<MvcRoadKContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("MvcRoadKContext") ?? throw new InvalidOperationException("Connection string 'MvcRoadKContext' not found.")));
 
 
 if (builder.Environment.IsDevelopment()){

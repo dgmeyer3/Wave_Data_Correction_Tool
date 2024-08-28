@@ -1,0 +1,97 @@
+@model IEnumerable<MvcWave.Models.RoadK>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<form asp-controller="Wave" asp-action="Index">
+    <p>
+        Unix Timestamp: <input type="text" name="SearchString" method = "get"/>
+                <input type="submit" value="Filter" />
+    </p>
+</form>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.timestamp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.humanRelation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.raw)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.optimalScore)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.accurateRating)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.realMin)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.realMax)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.comments)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.timestamp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.humanRelation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.raw)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.optimalScore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.accurateRating)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.realMin)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.realMax)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.comments)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
