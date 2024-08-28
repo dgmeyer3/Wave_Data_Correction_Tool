@@ -26,7 +26,7 @@ def main():
     # params: [spotID, db_table_name]
     cupsogue_params = ["spotId=5842041f4e65fad6a77089e8&days=1&intervalHours=6", "Wave"]
     dune_rd_west_params = ["spotId=584204214e65fad6a7709d07&days=1&intervalHours=6","Westhampton_Dunes"]
-    road_k_params = ["spotId=5842041f4e65fad6a77089f7&days=1&intervalHours=6","Road_K"]
+    road_k_params = ["spotId=5842041f4e65fad6a77089f7&days=1&intervalHours=6","RoadK"]
 
     base_url = f"https://services.surfline.com/kbyg/spots/forecasts/"
     

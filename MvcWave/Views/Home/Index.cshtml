@@ -3,6 +3,17 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Surf Data</h1>
+    <p>Search below to find wave information about the location of your choice.</p>
+
+<div class="spotSearch">
+    <button onclick="routeToSpot()" class = "dropdown-button">Select Location</button>
+    <div id="spot-dropdown" class="dropdown-content">
+        <a class = "ComboBox-link text-dark" asp-area="" asp-controller="Wave" asp-action="Index">Cupsogue</a>
+        <a class = "ComboBox-link text-dark" asp-area="" asp-controller="RoadK" asp-action="Index">Road K</a>
+        <a class = "ComboBox-link text-dark" asp-area="" asp-controller="DuneRoadWest" asp-action="Index">Dune Road West</a>
+    </div>
 </div>
+
+</div>
+

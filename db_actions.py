@@ -32,7 +32,7 @@ def connect_to_db(user,password,db_name,db_host,db_port,data_for_db,table_name):
         new_table.create(db)
     
     metadata = sa.MetaData()
-    table=sa.Table('Wave', metadata, autoload_with = db)
+    table=sa.Table(table_name, metadata, autoload_with = db)
 
     for item in data_for_db:
         timestamp = item["timestamp"]
