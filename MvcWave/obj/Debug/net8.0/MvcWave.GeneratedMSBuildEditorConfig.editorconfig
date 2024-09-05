@@ -17,87 +17,87 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MvcWave
 build_property.RootNamespace = MvcWave
-build_property.ProjectDir = c:\Users\2donm\Desktop\project_directory\Wave_Corrector\MvcWave\
+build_property.ProjectDir = C:\Users\2donm\Desktop\wave\Wave_Data_Correction_Tool\MvcWave\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Users\2donm\Desktop\project_directory\Wave_Corrector\MvcWave
+build_property.MSBuildProjectDirectory = C:\Users\2donm\Desktop\wave\Wave_Data_Correction_Tool\MvcWave
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/HelloWorld/Index.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/HelloWorld/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/HelloWorld/Welcome.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/HelloWorld/Welcome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSGVsbG9Xb3JsZFxXZWxjb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Home/Index.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Home/Privacy.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/RoadK/Create.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/RoadK/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9hZEtcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/RoadK/Delete.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/RoadK/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9hZEtcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/RoadK/Details.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/RoadK/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9hZEtcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/RoadK/Edit.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/RoadK/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9hZEtcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/RoadK/Index.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/RoadK/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9hZEtcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Shared/Error.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Wave/Create.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Wave/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2F2ZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Wave/Delete.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Wave/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2F2ZVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Wave/Details.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Wave/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2F2ZVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Wave/Edit.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Wave/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2F2ZVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Wave/Index.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Wave/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2F2ZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/_ViewImports.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/_ViewStart.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/2donm/Desktop/project_directory/Wave_Corrector/MvcWave/Views/Shared/_Layout.cshtml]
+[C:/Users/2donm/Desktop/wave/Wave_Data_Correction_Tool/MvcWave/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-2nhle5f267
